@@ -1,0 +1,11 @@
+<html>
+<head>
+<title></title>
+</head>
+{% include 'booking/navbar.html' %}
+<body>
+{% for p in pss  %}
+{{p.p_name}}:{{p.train}}:{{p.seat_number}}<br>
+{% endfor %}
+</body>
+</html>

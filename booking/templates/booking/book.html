@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>Ticket Booking</title>
+{% include 'booking/navbar.html' %}
+<body>
+<h6>Seat Availablity{{ra}}</h6><br>
+<br>
+<h6>Window seats : {{tws}}</h6><br>
+<h6>Middle seats :  {{tms}}</h6><br>
+<h6>Aisle seats : {{tais}}</h6><br>
+
+
+<form  action="{% url 'book' pk %}" method="POST" style="margin: 0" >
+                      {% csrf_token %}
+                        <input id="passenger_name"  name="passenger_name"  placeholder="enter the passenger name" >
+                        <input id="seat number"  name="seat_number"  placeholder="enter the seat number" >
+                        <input id="age"  name="age"  placeholder="enter the age" >
+                        {% comment %} <input id="gender"  name="gender"  placeholder="enter the gender [M/F]" > {% endcomment %}
+                        <select name="gender" id="gender"> 
+                          <option value="Male" selected>Male</option> 
+                          <option value="Female" >Female </option> 
+                        </select>
+                        <button class="btn waves-effect waves-light " style="display:inline" type="submit" name="action">Submit
+                    </button>
+                 </form>
+                 {% for m in messages  %}
+                 {{m}}
+                 {% endfor %}
+</body>
+</html>

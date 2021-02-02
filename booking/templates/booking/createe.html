@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>Create</title>
+<style>
+div {padding:5px;}
+body {font-family:Arial;}
+
+</style>
+</head>
+
+<body>
+<form  action="{% url 'createtrain' %}" method="POST" style="margin: 0" >
+                      {% csrf_token %}
+                        <input id="train_name"  name="train_name"  placeholder="enter the name" >
+                        <input id="train_number"  name="train_number"  placeholder="enter the number" >
+                        <input id="train_rows"  name="train_rows"  placeholder="enter the number of rows" >
+                        <button class="btn waves-effect waves-light " style="display:inline" type="submit" name="action">Submit
+                    </button>
+                 </form>
+<script>
+$('#p123').on('keyup', function(){
+    $('#ch123').val($(this).val());
+})
+</script>
+</body>
+</html>

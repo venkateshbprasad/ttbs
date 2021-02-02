@@ -1,0 +1,12 @@
+<html>
+<head>
+<title></title>
+</head>
+{% include 'booking/navbar.html' %}
+<body>
+Available trains<br>
+{% for t in trains  %}
+<a href= "{% url 'book' t.id %}">{{t.train_name}}</a><br>
+{% endfor %}
+</body>
+</html>
