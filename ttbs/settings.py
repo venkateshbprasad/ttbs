@@ -26,7 +26,7 @@ SECRET_KEY = '*!^+2jl+7b8j=ar=(ewhhbts$(jaq@fu1m__bm#%iyrlrocg$m'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['pure-ticket.herokuapp.com','localhost',127.0.0.1:8000]
+ALLOWED_HOSTS = ['pure-ticket.herokuapp.com','localhost','127.0.0.1']
 
 
 # Application definition

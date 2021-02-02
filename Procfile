@@ -1,1 +1,1 @@
-web: gunicorn ttbs.wsgi --log-file -
+web: gunicorn ttbs.wsgi 
